@@ -1,0 +1,13 @@
+// Example SCSS code
+@@include('variables.scss')
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+@@include('header.scss')

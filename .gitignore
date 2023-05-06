@@ -1,0 +1,41 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+.idea/
+src/img/svg.svg
+
+# VS code files #
+#################
+.vscode
+
+# Frontend ignore files #
+#########################
+npm-debug.*
+yarn-error.*
+node_modules
+.tmp
+*.map
+
+# Project ignore files #
+########################
+dist
+build
+build.zip
+css
+src/css/*.css
+src/css/*.map
+
+# Other ignore files #
+########################
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
