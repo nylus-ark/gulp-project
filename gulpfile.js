@@ -1,11 +1,17 @@
 // gulpfile.js
 
 const gulp = require("gulp");
+const del = require('del');
 const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
 const fileinclude = require('gulp-file-include');
+
+// Clean tast to remove dist folder
+gulp.task('clean', function () {
+  return del(['dist']);
+});
 
 // Compile Sass to CSS and move to dist/
 gulp.task("sass", function () {
@@ -57,3 +63,6 @@ gulp.task(
   "default",
   gulp.parallel("sass", "main-js", "html", "watch")
 );
+
+// Build task
+gulp.task('build', gulp.series('clean', gulp.parallel("sass", "main-js", "html", "watch")));
